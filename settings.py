@@ -47,15 +47,6 @@ PINECONE_ENVIRONMENT_ID = "gcp-starter"
 logging.info(f"PINECONE_ENVIRONMENT_ID is {PINECONE_ENVIRONMENT_ID}")
 
 
-# Pyppeteer configuration
-FROM_DOCKER = os.getenv("FROM_DOCKER")
-if not FROM_DOCKER:
-    logging.info("Running web scraping locally")
-    FROM_DOCKER = False
-else:
-    logging.info("Running web scraping from inside Docker")
-    FROM_DOCKER = True
-
 # Bot inference settings
 INFERENCE_SETTINGS = {
     'use_rag': False,
